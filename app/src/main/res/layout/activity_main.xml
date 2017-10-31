@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:id="@+id/main_layout"
+    tools:context="com.example.shivasairam.securecharge.MainActivity">
+
+
+    <ImageButton
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="92dp"
+        android:layout_marginStart="37dp"
+        android:elevation="0dp"
+        android:onClick="onstartbuttonpressed"
+        app:srcCompat="@drawable/ic_play_circle_outline_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/start"
+        android:layout_marginEnd="34dp"
+        android:elevation="0dp"
+        android:onClick="onstopbuttonpressed"
+        app:srcCompat="@drawable/ic_pause_circle_outline_black_24dp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:layout_marginStart="25dp"
+        android:layout_below="@+id/stop"
+        android:layout_alignStart="@+id/start" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:layout_below="@+id/stop"
+        android:layout_alignEnd="@+id/stop"
+        android:layout_marginEnd="26dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_battery_full_black_24dp"
+        android:foregroundGravity="center"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/battery_status"
+        android:layout_alignEnd="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/battery_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/start"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:text="Battery Status: Not Charging" />
+
+    <TextView
+        android:id="@+id/secure_charge_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView17"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:text="Secure Charge status: Not Running" />
+</RelativeLayout>

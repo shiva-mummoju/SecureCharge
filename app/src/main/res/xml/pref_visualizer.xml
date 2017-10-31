@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+        <PreferenceCategory android:title="Secure Charge Settings">
+            <CheckBoxPreference android:title="Charger Alarm"
+                android:summary="Notify When Charger Disconnected"
+                android:key="mainalarm"
+                android:defaultValue="true"/>
+
+            <CheckBoxPreference
+                android:title="Use Battery Full Alarm"
+                android:summary="Notify whhen the charging level is 100%"
+                android:key="bfalarm"
+                android:defaultValue="true"/>
+
+            <EditTextPreference
+                android:defaultValue="100"
+                android:key="level"
+                android:id="@+id/edit"
+                android:summary="100"
+                android:title="On reaching level alarm"
+
+                />
+
+        </PreferenceCategory>
+
+    <PreferenceCategory android:selectable="false"></PreferenceCategory>
+    </PreferenceScreen>
